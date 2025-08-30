@@ -1,19 +1,235 @@
 {
-  "name": "daneal19",
-  "expire": 30,
-  "totalGB": 100,
-  "configs": [
-    "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjMDMyNmUzYi0zM2UxLTQ5YzUtODJlNC0wOTU0MWFkZjVlN2U=@114.46.66.211:10077#V2RayConfing7✅",
-    "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTplOTUzZWRkOS0wMjk1LTRkMzktYWQ5ZS0xYjdjZTI2NDM1M2M=@36.234.90.216:10078#V2RayConfing7✅",
-    "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMDZmOGM0ZC04OWY0LTQwMDgtYmIwMi1kZGFmZTIzZTU4MWU=@36.234.102.58:10076#V2RayConfing7✅",
-    "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpkY2E5ZDlmMS01NjQwLTRmZWQtYjQ0My1iNzVjMTBiZmUyY2Q=@125.228.180.250:10081#V2RayConfing7✅",
-    "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMmIxMWVmOC0wNWU5LTQyOWEtYjNjMi0xZWE5NjkyYWEwZmU=@1.170.38.158:10084#V2RayConfing7✅",
-    "vless://4339007f-6132-4276-afd5-828a16a5a79f@46.17.100.153:21929?security=reality&encryption=none&pbk=qAIXS8H9t650DC9msTecxrvhD4myn9wBvcZL4NlLcTQ&headerType=none&fp=chrome&type=tcp&sni=yahoo.com&sid=a6f7a9bc2aabe632#V2RayConfing7✅",
-    "hysteria2://20d43425-938f-4163-9b4f-8fb7377f6885@xg.dimoyun.top:40001?security=tls&insecure=1&sni=xg.dimoyun.top#V2RayConfing7✅متصل جدید",
-    "hysteria2://7f1ad19e-2cc1-4eec-a583-d61f63165dea@dehub.xg-hub.icu:25784?security=tls&obfs=salamander&obfs-password=ZDQxZDhjZDk4ZjAwYjIwNA==&insecure=1&sni=dehub.xg-hub.icu#V2RayConfing7✅",
-    "hysteria2://8864aa9f-7517-4fd5-aef1-32050eb3095d@net2025.afsharidempire.uk:30205?security=tls&obfs=salamander&obfs-password=GdQ4bgvT8RFwuWi2&insecure=0&sni=net2025.afsharidempire.uk#V2RayConfing7✅",
-    "hysteria2://dongtaiwang.com@51.159.111.32:5355?security=tls&insecure=1&sni=www.bing.com#V2RayConfing7✅",
-    "hysteria2://dongtaiwang.com@108.181.5.130:63015?security=tls&insecure=1&sni=apple.com#V2RayConfing7✅",
-    "vless://18ce358e-b507-4cde-8c83-94806aedf467@85.239.53.46:443?security=reality&encryption=none&pbk=nyid7jiXERXF6qkkRVsub0wfX9xGKKAsVzQERxhqZHc&headerType=none&fp=chrome&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=stackoverflow.com&sid=c8e8e4b7#V2RayConfing7✅"
-  ]
-}
+  "log": {
+    "level": "warn",
+    "output": "box.log",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns-remote",
+        "address": "udp://1.1.1.1",
+        "address_resolver": "dns-direct"
+      },
+      {
+        "tag": "dns-direct",
+        "address": "1.1.1.1",
+        "address_resolver": "dns-local",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-local",
+        "address": "local",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "domain_suffix": ".ir",
+        "server": "dns-direct"
+      }
+    ],
+    "final": "dns-remote",
+    "independent_cache": true
+  },
+  "inbounds": [
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 12334,
+      "sniff": true,
+      "sniff_override_destination": true
+    },
+    {
+      "type": "direct",
+      "tag": "dns-in",
+      "listen": "127.0.0.1",
+      "listen_port": 16450
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "ss1",
+        "ss2",
+        "ss3",
+        "ss4",
+        "ss5",
+        "vless1",
+        "hysteria1",
+        "hysteria2",
+        "hysteria3",
+        "hysteria4",
+        "vless2"
+      ],
+      "default": "ss1"
+    },
+    {
+      "type": "ss",
+      "tag": "ss1",
+      "server": "114.46.66.211",
+      "server_port": 10077,
+      "method": "chacha20-ietf-poly1305",
+      "password": "c0326e3b-33e1-49c5-82e4-09541adf5e7e"
+    },
+    {
+      "type": "ss",
+      "tag": "ss2",
+      "server": "36.234.90.216",
+      "server_port": 10078,
+      "method": "chacha20-ietf-poly1305",
+      "password": "e953edd9-0295-4d39-ad9e-1b7ce264353c"
+    },
+    {
+      "type": "ss",
+      "tag": "ss3",
+      "server": "36.234.102.58",
+      "server_port": 10076,
+      "method": "chacha20-ietf-poly1305",
+      "password": "206f8c4d-89f4-4008-bb02-ddafe23e581e"
+    },
+    {
+      "type": "ss",
+      "tag": "ss4",
+      "server": "125.228.180.250",
+      "server_port": 10081,
+      "method": "chacha20-ietf-poly1305",
+      "password": "dca9d9f1-5640-4fed-b443-b75c10bfe2cd"
+    },
+    {
+      "type": "ss",
+      "tag": "ss5",
+      "server": "1.170.38.158",
+      "server_port": 10084,
+      "method": "chacha20-ietf-poly1305",
+      "password": "22b11ef8-05e9-429a-b3c2-1ea9692aa0fe"
+    },
+    {
+      "type": "vless",
+      "tag": "vless1",
+      "server": "46.17.100.153",
+      "server_port": 21929,
+      "uuid": "4339007f-6132-4276-afd5-828a16a5a79f",
+      "security": "reality",
+      "encryption": "none",
+      "pbk": "qAIXS8H9t650DC9msTecxrvhD4myn9wBvcZL4NlLcTQ",
+      "header_type": "none",
+      "fp": "chrome",
+      "type": "tcp",
+      "sni": "yahoo.com"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria1",
+      "server": "xg.dimoyun.top",
+      "server_port": 40001,
+      "password": "20d43425-938f-4163-9b4f-8fb7377f6885",
+      "security": "tls",
+      "insecure": true,
+      "sni": "xg.dimoyun.top"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2",
+      "server": "dehub.xg-hub.icu",
+      "server_port": 25784,
+      "password": "7f1ad19e-2cc1-4eec-a583-d61f63165dea",
+      "security": "tls",
+      "obfs": "salamander",
+      "obfs_password": "ZDQxZDhjZDk4ZjAwYjIwNA==",
+      "insecure": true,
+      "sni": "dehub.xg-hub.icu"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria3",
+      "server": "net2025.afsharidempire.uk",
+      "server_port": 30205,
+      "password": "8864aa9f-7517-4fd5-aef1-32050eb3095d",
+      "security": "tls",
+      "obfs": "salamander",
+      "obfs_password": "GdQ4bgvT8RFwuWi2",
+      "insecure": false,
+      "sni": "net2025.afsharidempire.uk"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria4",
+      "server": "51.159.111.32",
+      "server_port": 5355,
+      "password": "dongtaiwang.com",
+      "security": "tls",
+      "insecure": true,
+      "sni": "www.bing.com"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria5",
+      "server": "108.181.5.130",
+      "server_port": 63015,
+      "password": "dongtaiwang.com",
+      "security": "tls",
+      "insecure": true,
+      "sni": "apple.com"
+    },
+    {
+      "type": "vless",
+      "tag": "vless2",
+      "server": "85.239.53.46",
+      "server_port": 443,
+      "uuid": "18ce358e-b507-4cde-8c83-94806aedf467",
+      "security": "reality",
+      "encryption": "none",
+      "pbk": "nyid7jiXERXF6qkkRVsub0wfX9xGKKAsVzQERxhqZHc",
+      "header_type": "none",
+      "fp": "chrome",
+      "type": "tcp",
+      "flow": "xtls-rprx-vision",
+      "sni": "stackoverflow.com"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "inbound": "dns-in",
+        "outbound": "dns-out"
+      },
+      {
+        "port": 53,
+        "outbound": "dns-out"
+      }
+    ],
+    "final": "select",
+    "auto_detect_interface": true,
+    "override_android_vpn": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "clash.db"
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:16756",
+      "secret": "wy8lPymBM0mAIonQ"
+    }
+  }
+  }
