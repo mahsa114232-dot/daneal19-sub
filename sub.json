@@ -1,19 +1,19 @@
 {
-  "remark": "daneal19",
-  "traffic": "100GB",
-  "expiry": "30d",
+  "name": "daneal19",
+  "expire": 30,
+  "totalGB": 100,
   "configs": [
-    "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjMDMyNmUzYi0zM2UxLTQ5YzUtODJlNC0wOTU0MWFkZjVlN2U%3D@114.46.66.211:10077#%40V2RayConfing7%E2%9C%85",
-    "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTplOTUzZWRkOS0wMjk1LTRkMzktYWQ5ZS0xYjdjZTI2NDM1M2M%3D@36.234.90.216:10078#%40V2RayConfing7%E2%9C%85",
-    "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMDZmOGM0ZC04OWY0LTQwMDgtYmIwMi1kZGFmZTIzZTU4MWU%3D@36.234.102.58:10076#%40V2RayConfing7%E2%9C%85",
-    "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpkY2E5ZDlmMS01NjQwLTRmZWQtYjQ0My1iNzVjMTBiZmUyY2Q%3D@125.228.180.250:10081#%40V2RayConfing7%E2%9C%85",
-    "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMmIxMWVmOC0wNWU5LTQyOWEtYjNjMi0xZWE5NjkyYWEwZmU%3D@1.170.38.158:10084#%40V2RayConfing7%E2%9C%85",
-    "vless://4339007f-6132-4276-afd5-828a16a5a79f@46.17.100.153:21929?security=reality&encryption=none&pbk=qAIXS8H9t650DC9msTecxrvhD4myn9wBvcZL4NlLcTQ&headerType=none&fp=chrome&type=tcp&sni=yahoo.com&sid=a6f7a9bc2aabe632#%40V2RayConfing7%E2%9C%85",
-    "hysteria2://20d43425-938f-4163-9b4f-8fb7377f6885@xg.dimoyun.top:40001?security=tls&insecure=1&sni=xg.dimoyun.top#%40V2RayConfing7%E2%9C%85%D9%85%D8%AA%D8%B5%D9%84%20%D8%AC%D8%AF%DB%8C%D8%AF",
-    "hysteria2://7f1ad19e-2cc1-4eec-a583-d61f63165dea@dehub.xg-hub.icu:25784?security=tls&obfs=salamander&obfs-password=ZDQxZDhjZDk4ZjAwYjIwNA%3D%3D&insecure=1&sni=dehub.xg-hub.icu#%40V2RayConfing7%E2%9C%85",
-    "hysteria2://8864aa9f-7517-4fd5-aef1-32050eb3095d@net2025.afsharidempire.uk:30205?security=tls&obfs=salamander&obfs-password=GdQ4bgvT8RFwuWi2&insecure=0&sni=net2025.afsharidempire.uk#%40V2RayConfing7%E2%9C%85",
-    "hysteria2://dongtaiwang.com@51.159.111.32:5355?security=tls&insecure=1&sni=www.bing.com#%40V2RayConfing7%E2%9C%85",
-    "hysteria2://dongtaiwang.com@108.181.5.130:63015?security=tls&insecure=1&sni=apple.com#%40V2RayConfing7%E2%9C%85",
-    "vless://18ce358e-b507-4cde-8c83-94806aedf467@85.239.53.46:443?security=reality&encryption=none&pbk=nyid7jiXERXF6qkkRVsub0wfX9xGKKAsVzQERxhqZHc&headerType=none&fp=chrome&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=stackoverflow.com&sid=c8e8e4b7#%40V2RayConfing7%E2%9C%85"
+    "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjMDMyNmUzYi0zM2UxLTQ5YzUtODJlNC0wOTU0MWFkZjVlN2U=@114.46.66.211:10077#V2RayConfing7✅",
+    "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTplOTUzZWRkOS0wMjk1LTRkMzktYWQ5ZS0xYjdjZTI2NDM1M2M=@36.234.90.216:10078#V2RayConfing7✅",
+    "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMDZmOGM0ZC04OWY0LTQwMDgtYmIwMi1kZGFmZTIzZTU4MWU=@36.234.102.58:10076#V2RayConfing7✅",
+    "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpkY2E5ZDlmMS01NjQwLTRmZWQtYjQ0My1iNzVjMTBiZmUyY2Q=@125.228.180.250:10081#V2RayConfing7✅",
+    "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyMmIxMWVmOC0wNWU5LTQyOWEtYjNjMi0xZWE5NjkyYWEwZmU=@1.170.38.158:10084#V2RayConfing7✅",
+    "vless://4339007f-6132-4276-afd5-828a16a5a79f@46.17.100.153:21929?security=reality&encryption=none&pbk=qAIXS8H9t650DC9msTecxrvhD4myn9wBvcZL4NlLcTQ&headerType=none&fp=chrome&type=tcp&sni=yahoo.com&sid=a6f7a9bc2aabe632#V2RayConfing7✅",
+    "hysteria2://20d43425-938f-4163-9b4f-8fb7377f6885@xg.dimoyun.top:40001?security=tls&insecure=1&sni=xg.dimoyun.top#V2RayConfing7✅متصل جدید",
+    "hysteria2://7f1ad19e-2cc1-4eec-a583-d61f63165dea@dehub.xg-hub.icu:25784?security=tls&obfs=salamander&obfs-password=ZDQxZDhjZDk4ZjAwYjIwNA==&insecure=1&sni=dehub.xg-hub.icu#V2RayConfing7✅",
+    "hysteria2://8864aa9f-7517-4fd5-aef1-32050eb3095d@net2025.afsharidempire.uk:30205?security=tls&obfs=salamander&obfs-password=GdQ4bgvT8RFwuWi2&insecure=0&sni=net2025.afsharidempire.uk#V2RayConfing7✅",
+    "hysteria2://dongtaiwang.com@51.159.111.32:5355?security=tls&insecure=1&sni=www.bing.com#V2RayConfing7✅",
+    "hysteria2://dongtaiwang.com@108.181.5.130:63015?security=tls&insecure=1&sni=apple.com#V2RayConfing7✅",
+    "vless://18ce358e-b507-4cde-8c83-94806aedf467@85.239.53.46:443?security=reality&encryption=none&pbk=nyid7jiXERXF6qkkRVsub0wfX9xGKKAsVzQERxhqZHc&headerType=none&fp=chrome&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=stackoverflow.com&sid=c8e8e4b7#V2RayConfing7✅"
   ]
 }
